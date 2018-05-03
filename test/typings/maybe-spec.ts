@@ -81,3 +81,6 @@ console.assert(Some(11).map(plus18).isNone());
 console.assert(Maybe.of('a').flatMap(a => Some(a + 'b')).orNull() === null);
 console.assert(Maybe.of('a').filter(Boolean).orJust('b') === null);
 console.log(name, surname, message, messageCopy);
+
+// Remove comment to test NonNullable return type by forcing the type check to fail
+//console.assert(Maybe.some(12).map(n => {}).isSome());
